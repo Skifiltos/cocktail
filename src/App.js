@@ -11,18 +11,20 @@ import ErrorScreen from "./screen/ErrorScreen";
 
 function App() {
 
-  return <Router className='App'>
-    <Navbar />
-    <Sidebar />
-    <Routes>
-      <Route path='/' exact element={<HomeScreen />} />
-      <Route path='/about' element={<AboutScreen />} />
-      <Route path='/contattaci' element={<ContactScreen />} />
-      <Route path='/cocktail/:id' element={<SingleCocktailScreen />} />
-      <Route path='*' element={<ErrorScreen />} />
-    </Routes>
-    <Footer />
-  </Router>;
+  return (
+    <Router className='App'>
+      <Navbar />
+      <Sidebar />
+      <Routes>
+        <Route path='/' exact element={<HomeScreen />} />
+        <Route path='/about' element={<AboutScreen />} />
+        <Route path='/contattaci' element={<ContactScreen />} />
+        <Route path='/cocktail/:id' element={<SingleCocktailScreen />} />
+        <Route path='*' element={<ErrorScreen />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
 export default App;
