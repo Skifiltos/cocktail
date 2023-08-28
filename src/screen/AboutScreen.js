@@ -4,6 +4,7 @@ import { valueCards, teamCards } from "../utils/info";
 import image from "../assets/image/about-hero.jpg";
 import teamImg from "../assets/image/team-img.jpg";
 
+
 const AboutScreen = () => {
   return (
     <>
@@ -52,7 +53,7 @@ const AboutScreen = () => {
           </h3>
           {
             teamCards.map((card) => {
-              return <Card key={card.title} {...card} className={"value-card"} />
+              return <Card key={card.title} {...card} />
             })
           }
         </div>
