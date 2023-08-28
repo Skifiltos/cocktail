@@ -29,7 +29,7 @@ const links = [
 ];
 
 const LinkComponent = ({ classLink }) => {
-  const { closeSidebar } = useGlobalContext();
+  const closeSidebar = useGlobalContext();
 
   return (
     <ul className={classLink}>
