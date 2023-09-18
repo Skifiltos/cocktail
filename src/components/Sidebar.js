@@ -13,7 +13,7 @@ const Sidebar = () => {
             <h3>Drink Team</h3>
           </div>
           <button className="nav-toggler btn icon-btn" onClick={closeSidebar}>
-            <VscArrowSmallLeft cloassName="nav-icon" />
+            <VscArrowSmallLeft className="nav-icon" />
           </button>
         </header>
         <div className="container">
