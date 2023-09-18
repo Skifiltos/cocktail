@@ -27,6 +27,18 @@ const useFetch = (query, type = false) => {
     // imposto lo stato per l'errore
     const [isError, setIsError] = useState(false);
 
+    // useEffect per il fetch dei dati
+    // quando viene richiamata questa funzione
+    // viene eseguita la query e viene settato
+    // lo stato isLoading a false
+    // e viene settato lo stato isError a false
+    // se la query non va a buon fine
+    // viene settato lo stato isError a true
+    // e viene settato lo stato count a 0
+    // e viene settato lo stato isLoading a false
+    // ogni volta che la query viene cambiata lo useEffect
+    // esegue di nuovo le funzioni al suo interno quindi viene eseguita di nuovo
+    // la query e viene settato lo stato isLoading a false etc...
     useEffect(() => {
         (async (query) => {
             setIsError(false);
@@ -35,7 +47,7 @@ const useFetch = (query, type = false) => {
             try {
                 const response = await axios.get(`${url}${query}`);
                 setData(response.data);
-                setCount(response.data.drinks);
+                setCount(response.data.drinks.length);
                 console.log('====================================');
                 console.log(response.data);
                 console.log('====================================');
