@@ -20,7 +20,11 @@ const ContactScreen = () => {
       </div>
       <div className="contact-form-container container">
 
-        <form className="contact-form container">
+        <form
+          action="https://formspree.io/f/xoqolkdo"
+          method="POST"
+          className="contact-form container"
+        >
 
           <div className="form-group">
             <label htmlFor="nome">
@@ -29,6 +33,7 @@ const ContactScreen = () => {
             <input
               type="text"
               id="nome"
+              name="nome"
               className="input"
               placeholder="Inserisci il tuo nome"
             />
@@ -42,6 +47,7 @@ const ContactScreen = () => {
             <input
               type="text"
               id="cognome"
+              name="cognome"
               className="input"
               placeholder="Inserisci il tuo cognome"
             />
@@ -55,6 +61,7 @@ const ContactScreen = () => {
             <input
               type="text"
               id="email"
+              name="email"
               className="input"
               placeholder="Inserisci la tua email"
             />
@@ -68,6 +75,7 @@ const ContactScreen = () => {
             <input
               type="text"
               id="telefono"
+              name="telefono"
               className="input"
               placeholder="Inserisci il tuo telefono"
             />
@@ -81,13 +89,16 @@ const ContactScreen = () => {
             <input
               type="text"
               id="ricetta"
+              name="ricetta"
               className="input"
               placeholder="Describi la tua ricetta"
             />
             <hr />
           </div>
 
-          <button className="btn btn-primary">Invia la tua ricetta</button>
+          <button type="submit" className="btn btn-primary">
+            Invia la tua ricetta
+          </button>
 
         </form>
       </div >
