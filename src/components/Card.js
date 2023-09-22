@@ -21,7 +21,7 @@ const Card = ({ className, title, subtitle, icon, text, img }) => {
             <div className="card-icon">
               {icon}
             </div>
-          )
+          ) 
         }
         {
           text ? (

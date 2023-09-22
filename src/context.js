@@ -39,21 +39,23 @@ const AppProvider = ({ children }) => {
 
 
 
-    return <AppContext.Provider
-        value={{
-            // passo tutte le funzioni che mi servono
-            isSidebarOpen,
-            openSidebar,
-            closeSidebar,
-            query,
-            isLoading,
-            data,
-            isError,
-            count,
-            searchCocktail
-        }}>
-        {children}
-    </AppContext.Provider >
+    return (
+        <AppContext.Provider
+            value={{
+                // passo tutte le funzioni che mi servono
+                isSidebarOpen,
+                openSidebar,
+                closeSidebar,
+                query,
+                isLoading,
+                data,
+                isError,
+                count,
+                searchCocktail
+            }}>
+            {children}
+        </AppContext.Provider >
+    );
 }
 
 

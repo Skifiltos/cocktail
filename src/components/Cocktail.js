@@ -4,13 +4,16 @@ import { useNavigate } from "react-router-dom";
 import { HiClipboardList } from "react-icons/hi";
 import { useGlobalContext } from "../context";
 
+
 const Cocktail = ({ strDrinkThumb: img, idDrink: _id, strDrink: name }) => {
   const { getScrollPosition } = useGlobalContext();
   const [show, setShow] = useState(false);
   // const navigate = useNavigate();
+
   const showInfo = () => {
     setShow(true);
   }
+
   const hideInfo = () => {
     setShow(false);
   }
@@ -34,7 +37,7 @@ const Cocktail = ({ strDrinkThumb: img, idDrink: _id, strDrink: name }) => {
 
 const Wrapper = styled.article`
   cursor: pointer;
-  position: relative;
+  position: relative; 
   width: 70%;
   margin: auto;
   border-radius: var(--img-radius);

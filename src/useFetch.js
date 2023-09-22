@@ -49,7 +49,7 @@ const useFetch = (query, type = false) => {
                 setData(response.data);
                 setCount(response.data.drinks.length);
                 console.log('====================================');
-                console.log(response.data);
+                console.log(response);
                 console.log('====================================');
             } catch (err) {
                 setIsError(true);
